@@ -22,13 +22,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Byte Broz — Digital Creative Studio',
+  title: 'GWRO — Digital Creative Studio',
   description:
     'We craft immersive digital products for brands that refuse to be average. Strategy, design and code under one roof.',
-  keywords: ['creative studio', 'web design', 'digital agency', 'UI/UX', 'Byte Broz'],
-  authors: [{ name: 'Byte Broz' }],
+  keywords: ['creative studio', 'web design', 'digital agency', 'UI/UX', 'GWRO'],
+  authors: [{ name: 'GWRO' }],
   openGraph: {
-    title: 'Byte Broz — Digital Creative Studio',
+    title: 'GWRO — Digital Creative Studio',
     description: 'Immersive digital products for ambitious brands.',
     type: 'website',
   },

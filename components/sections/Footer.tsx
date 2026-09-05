@@ -161,7 +161,7 @@ export default function Footer() {
           </div>
           
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
-            <span className="label" style={{ color: 'var(--muted)', opacity: 0.5 }}>© 2026 Byte Broz Studio</span>
+            <span className="label" style={{ color: 'var(--muted)', opacity: 0.5 }}>© 2026 GWRO</span>
             <div style={{ display: 'flex', gap: '2rem' }}>
               <a href="#work" className="label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Work</a>
               <a href="#about" className="label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Studio</a>

@@ -108,7 +108,7 @@ export default function Navbar() {
         <div ref={logoRef} style={{ opacity: 0, flexShrink: 0 }}>
           <Link
             href="/"
-            aria-label="Byte Broz home"
+            aria-label="GWRO home"
             style={{
               fontFamily: 'var(--font-display), Georgia, serif',
               fontSize: 'clamp(15px, 1.5vw, 18px)',
@@ -122,9 +122,8 @@ export default function Navbar() {
               gap: '0.25rem',
             }}
           >
-            Byte
-            <span style={{ opacity: 0.35, margin: '0 1px' }}>/</span>
-            Broz
+            GWRO
+            <span style={{ opacity: 0.35, margin: '0 1px' }}>!</span>
           </Link>
         </div>
 
@@ -271,7 +270,7 @@ export default function Navbar() {
               color: 'var(--muted)',
             }}
           >
-            Byte Broz
+            GWRO!
           </span>
         </div>
 
@@ -314,7 +313,7 @@ export default function Navbar() {
           }}
         >
           <span style={{ fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)' }}>
-            © 2026 Byte Broz
+            © 2026 GWRO
           </span>
           <a
             href="#contact"

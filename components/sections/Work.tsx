@@ -85,6 +85,7 @@ export default function Work() {
 
 function ProjectItem({ project, index }: { project: any; index: number }) {
   const itemRef = useRef<HTMLDivElement>(null)
+  const isVoiceUp = project.id === 'voiceup'
   
   const handleMouseEnter = () => {
     // Wrapper scales down slightly for an editorial inset feel
@@ -184,20 +185,43 @@ function ProjectItem({ project, index }: { project: any; index: number }) {
           width: '100%',
           height: 'clamp(60vh, 80vh, 900px)',
           overflow: 'hidden',
-          backgroundColor: '#111',
-          willChange: 'transform'
+          backgroundColor: isVoiceUp ? 'var(--black)' : '#111',
+          willChange: 'transform',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
         data-cursor-label="View"
       >
+        {/* Breathing gradient for VoiceUp */}
+        {isVoiceUp && (
+          <div 
+            className="gradient-bg-breath"
+            style={{
+              position: 'absolute',
+              bottom: 'auto',
+              top: '50%',
+              left: '50%',
+              width: '120%',
+              height: '120%',
+              transform: 'translate(-50%, -50%)',
+              opacity: 0.5,
+              pointerEvents: 'none',
+              zIndex: 0,
+            }}
+          />
+        )}
         <img 
           className="project-image"
           src={project.image} 
           alt={project.title} 
           style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            willChange: 'transform'
+            width: isVoiceUp ? '85%' : '100%',
+            height: isVoiceUp ? '90%' : '100%',
+            objectFit: isVoiceUp ? 'contain' : 'cover',
+            willChange: 'transform',
+            position: 'relative',
+            zIndex: 1,
           }}
         />
       </div>
