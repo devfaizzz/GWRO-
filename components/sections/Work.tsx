@@ -89,26 +89,26 @@ function ProjectItem({ project, index }: { project: any; index: number }) {
   
   const handleMouseEnter = () => {
     // Wrapper scales down slightly for an editorial inset feel
-    gsap.to(itemRef.current?.querySelector('.project-image-wrapper'), {
+    gsap.to(itemRef.current?.querySelector('.project-image-wrapper') ?? null, {
       scale: 0.98,
       duration: 0.8,
       ease: 'power3.out'
     })
     // Image scales up subtly
-    gsap.to(itemRef.current?.querySelector('.project-image'), {
+    gsap.to(itemRef.current?.querySelector('.project-image') ?? null, {
       scale: 1.05,
       duration: 0.8,
       ease: 'power3.out'
     })
     // Title shifts right
-    gsap.to(itemRef.current?.querySelector('.project-title'), {
+    gsap.to(itemRef.current?.querySelector('.project-title') ?? null, {
       x: 16,
       color: 'var(--white)',
       duration: 0.6,
       ease: 'power3.out'
     })
     // Metadata shifts left slightly
-    gsap.to(itemRef.current?.querySelector('.project-meta'), {
+    gsap.to(itemRef.current?.querySelector('.project-meta') ?? null, {
       x: -8,
       duration: 0.6,
       ease: 'power3.out'
@@ -116,23 +116,23 @@ function ProjectItem({ project, index }: { project: any; index: number }) {
   }
 
   const handleMouseLeave = () => {
-    gsap.to(itemRef.current?.querySelector('.project-image-wrapper'), {
+    gsap.to(itemRef.current?.querySelector('.project-image-wrapper') ?? null, {
       scale: 1,
       duration: 0.8,
       ease: 'power3.out'
     })
-    gsap.to(itemRef.current?.querySelector('.project-image'), {
+    gsap.to(itemRef.current?.querySelector('.project-image') ?? null, {
       scale: 1,
       duration: 0.8,
       ease: 'power3.out'
     })
-    gsap.to(itemRef.current?.querySelector('.project-title'), {
+    gsap.to(itemRef.current?.querySelector('.project-title') ?? null, {
       x: 0,
       color: 'var(--off-white)',
       duration: 0.6,
       ease: 'power3.out'
     })
-    gsap.to(itemRef.current?.querySelector('.project-meta'), {
+    gsap.to(itemRef.current?.querySelector('.project-meta') ?? null, {
       x: 0,
       duration: 0.6,
       ease: 'power3.out'
