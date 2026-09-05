@@ -27,20 +27,20 @@ export default function Footer() {
       }
     })
 
-    tl.fromTo('.footer-heading', 
+    tl.fromTo('.footer-heading',
       { yPercent: 40, opacity: 0, filter: 'blur(10px)' },
       { yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 1.2, ease: 'power4.out' }
     )
-    .fromTo('.footer-form-wrapper',
-      { y: 40, opacity: 0, filter: 'blur(10px)' },
-      { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.2, ease: 'power4.out' },
-      '-=0.8'
-    )
-    .fromTo('.footer-bottom',
-      { opacity: 0 },
-      { opacity: 1, duration: 1, ease: 'power2.out' },
-      '-=0.5'
-    )
+      .fromTo('.footer-form-wrapper',
+        { y: 40, opacity: 0, filter: 'blur(10px)' },
+        { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.2, ease: 'power4.out' },
+        '-=0.8'
+      )
+      .fromTo('.footer-bottom',
+        { opacity: 0 },
+        { opacity: 1, duration: 1, ease: 'power2.out' },
+        '-=0.5'
+      )
 
   }, { dependencies: [isLoaded], scope: containerRef })
 
@@ -50,7 +50,7 @@ export default function Footer() {
     setFormStatus(null)
 
     const formData = new FormData(e.currentTarget)
-    
+
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -72,31 +72,31 @@ export default function Footer() {
 
   return (
     <section ref={containerRef} id="contact" style={{ backgroundColor: 'var(--black)', position: 'relative', overflow: 'hidden' }}>
-      
+
       {/* Reuse breathing gradient but position it relative to the footer */}
       <div className="gradient-bg-breath" style={{ top: '50%', bottom: 'auto', transform: 'translate(-50%, -50%)', opacity: 0.5 }} />
 
       <div style={{ padding: '10rem clamp(1.25rem, 5vw, 4rem) 2rem', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '100svh' }}>
-        
+
         <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr', gap: '6rem', alignItems: 'center' }} className="footer-grid">
-          
+
           <div>
-            <h2 
-              className="font-display footer-heading" 
+            <h2
+              className="font-display footer-heading"
               style={{ fontSize: 'clamp(80px, 15vw, 220px)', fontWeight: 300, color: 'var(--white)', lineHeight: 0.9, letterSpacing: '-0.03em', margin: 0 }}
             >
-              Let's<br/>Talk.
+              Let's<br />Talk.
             </h2>
           </div>
 
           <div className="footer-form-wrapper" style={{ maxWidth: '500px', width: '100%' }}>
             <form ref={formRef} onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
               <input type="hidden" name="access_key" value="96e639a4-de3b-4ac9-95aa-826b905850c4" />
-              
+
               <div className="input-group">
                 <input type="text" name="name" required placeholder="Your Name" className="form-input" />
               </div>
-              
+
               <div className="input-group">
                 <input type="email" name="email" required placeholder="Email Address" className="form-input" />
               </div>
@@ -105,8 +105,8 @@ export default function Footer() {
                 <textarea name="message" required placeholder="Project Details" rows={4} className="form-input" style={{ resize: 'none' }}></textarea>
               </div>
 
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 disabled={isSubmitting}
                 style={{
                   alignSelf: 'flex-start',
@@ -126,13 +126,13 @@ export default function Footer() {
                   gap: '0.75rem'
                 }}
                 onMouseEnter={(e) => {
-                  if(!isSubmitting) {
+                  if (!isSubmitting) {
                     e.currentTarget.style.backgroundColor = 'var(--white)'
                     e.currentTarget.style.color = 'var(--black)'
                   }
                 }}
                 onMouseLeave={(e) => {
-                  if(!isSubmitting) {
+                  if (!isSubmitting) {
                     e.currentTarget.style.backgroundColor = 'transparent'
                     e.currentTarget.style.color = 'var(--white)'
                   }
@@ -152,14 +152,14 @@ export default function Footer() {
         <div className="footer-bottom" style={{ marginTop: '8rem', display: 'flex', flexDirection: 'column', gap: '3rem', borderTop: '1px solid var(--hairline)', paddingTop: '3rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
             <span className="label" style={{ color: 'var(--white)', fontSize: '13px' }}>gwrofaiz@gmail.com</span>
-            
+
             <div style={{ display: 'flex', gap: '2.5rem' }}>
               <a href="#" className="label" style={{ color: 'var(--muted)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--white)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>Twitter</a>
               <a href="#" className="label" style={{ color: 'var(--muted)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--white)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>Instagram</a>
               <a href="#" className="label" style={{ color: 'var(--muted)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--white)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>LinkedIn</a>
             </div>
           </div>
-          
+
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
             <span className="label" style={{ color: 'var(--muted)', opacity: 0.5 }}>© 2026 GWRO</span>
             <div style={{ display: 'flex', gap: '2rem' }}>
@@ -169,7 +169,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        
+
       </div>
 
       <style>{`
