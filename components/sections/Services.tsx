@@ -85,7 +85,7 @@ function ServiceRow({ service, index }: { service: any; index: number }) {
       duration: 0.6,
       ease: 'power3.out'
     })
-    gsap.to(rowRef.current?.querySelector('.service-desc'), {
+    gsap.to(rowRef.current?.querySelector('.service-desc') ?? null, {
       opacity: 0.4,
       x: -20,
       duration: 0.6,
@@ -107,7 +107,7 @@ function ServiceRow({ service, index }: { service: any; index: number }) {
       duration: 0.6,
       ease: 'power3.out'
     })
-    gsap.to(rowRef.current?.querySelector('.service-desc'), {
+    gsap.to(rowRef.current?.querySelector('.service-desc') ?? null, {
       opacity: 1,
       x: 0,
       duration: 0.6,
