@@ -151,7 +151,7 @@ export default function Footer() {
         {/* Bottom Footer Row */}
         <div className="footer-bottom" style={{ marginTop: '8rem', display: 'flex', flexDirection: 'column', gap: '3rem', borderTop: '1px solid var(--hairline)', paddingTop: '3rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
-            <span className="label" style={{ color: 'var(--white)', fontSize: '13px' }}>hello@bytebroz.studio</span>
+            <span className="label" style={{ color: 'var(--white)', fontSize: '13px' }}>gwrofaiz@gmail.com</span>
             
             <div style={{ display: 'flex', gap: '2.5rem' }}>
               <a href="#" className="label" style={{ color: 'var(--muted)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--white)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>Twitter</a>
